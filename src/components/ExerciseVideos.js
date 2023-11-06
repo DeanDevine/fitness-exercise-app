@@ -19,7 +19,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
         alignItems="center"
         sx={{ flexDirection: { lg: "row" }, gap: { lg: "110px", xs: "0" } }}
       >
-        {exerciseVideos?.slice(0, 6).map((item, index) => {
+        {exerciseVideos?.slice(0, 6).forEach((item, index) => {
           <a
             key={index}
             className="exercise-video"

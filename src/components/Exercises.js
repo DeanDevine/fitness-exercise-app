@@ -40,7 +40,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       setExercises(exercisesData);
     };
     fetchExercisesData();
-  }, [bodyPart]);
+  }, [bodyPart, setExercises]);
 
   return (
     <Box id="exercises" sx={{ mt: { lg: "110px" } }} mt="50px" p="20px">
@@ -53,7 +53,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         flexWrap="wrap"
         justifyContent="center"
       >
-        {currentExercises.map((exercise, index) => {
+        {currentExercises.forEach((exercise, index) => {
           <ExerciseCard key={index} exercise={exercise} />;
         })}
       </Stack>
